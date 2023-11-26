@@ -3,10 +3,33 @@
     Prof. Ricardo Fabio
 */
 
+/* CSS Reset */
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+/* importacion de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+/* Layout */
+.contenedor {
+    margin: 0 auto;
+}
 /* Smartphone portrait */
 @media (min-width: 576px) {
     body {
         background-color: #00ffff;
+    }
+    /* Layout */
+    .contenedor {
+        max-width: 540px;
     }
 }
 /* Smartphone landscape */
@@ -14,17 +37,30 @@
     body {
         background-color: #00ffff;
     }
+    /* Layout */
+    .contenedor {
+        max-width: 720px;
+        background-color: #77ff00;
+    }
 }
 /* Tablet portrait */
 @media (min-width: 768px) {
     body {
         background-color: #ffff00;
     }
+    /* Layout */
+    .contenedor {
+        max-width: 960px;
+    }
 }
 /* Tablet landscape */
 @media (min-width: 992px) {
     body {
         background-color: #ff6600;
+    }
+    /* Layout */
+    .contenedor {
+        max-width: 1140px;
     }
 }
 /* PC */
