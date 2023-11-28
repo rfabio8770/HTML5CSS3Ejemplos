@@ -2,6 +2,9 @@
     Hoja de estilos para el sitio de una página HTML5 y CSS3
     Prof. Ricardo Fabio
 */
+/* importacion de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 
 /* CSS Reset */
 *{
@@ -9,9 +12,6 @@
     border: 0;
     padding: 0;
 }
-
-/* importacion de google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -22,11 +22,66 @@ body {
 .contenedor {
     margin: 0 auto;
 }
+
+.Flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* icono tope */
+#tope {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
 /* Smartphone portrait */
+
+header {
+    height: 60px;
+}
+
+#logo img {
+    width:128px;
+    height:128px;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ul {
+    right:0;
+}
+
+
+label {
+    font-size: 3em;
+    padding-right: 15px;
+}
+
+nav ul {
+    list-style: none;
+    background-color: #343358;
+    height: 100vh;
+    position: fixed;
+    top:60px;
+    right: -100%;
+    width:100%;
+    transition: all 0.5s;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:white;
+}
+
 @media (min-width: 576px) {
-    body {
-        background-color: #00ffff;
-    }
+    
     /* Layout */
     .contenedor {
         max-width: 540px;
@@ -34,20 +89,15 @@ body {
 }
 /* Smartphone landscape */
 @media (min-width: 576px) {
-    body {
-        background-color: #00ffff;
-    }
+    
     /* Layout */
     .contenedor {
         max-width: 720px;
-        background-color: #77ff00;
     }
 }
 /* Tablet portrait */
 @media (min-width: 768px) {
-    body {
-        background-color: #ffff00;
-    }
+    
     /* Layout */
     .contenedor {
         max-width: 960px;
@@ -55,9 +105,7 @@ body {
 }
 /* Tablet landscape */
 @media (min-width: 992px) {
-    body {
-        background-color: #ff6600;
-    }
+    
     /* Layout */
     .contenedor {
         max-width: 1140px;
@@ -65,7 +113,38 @@ body {
 }
 /* PC */
 @media (min-width: 1200px) {
-    body {
-        background-color: #ff0000;
+    
+    /* cabecera */
+    header {
+        height:120px;
+    }
+
+    #logo img {
+        width:189px;
+        height:189px;
+        margin-top: 30px;
+    }
+
+    label {
+        display:none;
+    }
+
+    nav ul {
+        position: static;
+        height:auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: #343538;
+    }
+
+    nav ul li a:hover {
+        color: #c00000;
     }
 }
