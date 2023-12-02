@@ -28,6 +28,19 @@ body {
     justify-content: space-between;
 }
 
+.Flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.topicossobre {
+    margin-top: 10px;
+}
+
+.topicossobre img {
+    margin-right: 10px;
+}
+
 .boton {
     text-decoration: none;
     color: #fff;
@@ -96,6 +109,7 @@ main {
     height: 75vh;
     background: url(img/banner.jpg);
     background-size: cover;
+    background-position: center;
     color:#fff;
     flex-direction: column;
     justify-content: center;
@@ -111,7 +125,29 @@ main h2 {
     margin: 20px 0px 50px 0px;
 }
 
+main a {
+    padding:10px;
+}
+/* Sobre */
+#sobre {
+    padding: 50px 0px;
+    background: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+#destaquesobre {
+    display:none;
+}
 
+#textosobre {
+    color:#fff;
+    padding: 0px 10px;
+}
+
+#textosobre h2
+{
+    margin-bottom:  10px;
+}
 @media (min-width: 576px) {
     
     /* Layout */
@@ -202,8 +238,25 @@ main h2 {
     nav ul li a:hover {
         color: #c00000;
     }
-        /*destaque*/
-        main{
-            height: 70vh;
-        }
+    
+    
+    /*destaque*/
+    main{
+        height: 70vh;
+    }
+
+    /* sobre */
+    #sobre {
+        background-attachment: fixed;
+    }
+    
+    /*destaquesobre*/
+    #destaquesobre {
+        display: inline;
+    }
+
+    #destaquesobre img {
+        border-radius: 50%;
+        margin-right: 50px;
+    } 
 }
