@@ -33,6 +33,11 @@ body {
     align-items: center;
 }
 
+.Flex3 {
+    display: flex;
+    flex-direction: column;
+}
+
 .topicossobre {
     margin-top: 10px;
 }
@@ -151,6 +156,25 @@ main a {
 {
     margin-bottom:  10px;
 }
+/* Una página */
+#unapagina {
+    padding: 50px 10px;
+}
+
+#unapagina h2 {
+    margin-bottom: 10px;
+}
+
+#unapgina p {
+    margin-bottom: 25px;
+}
+
+#video iframe {
+    width: 340px;
+    height: 191px;
+    border: 0;
+}
+
 @media (min-width: 576px) {
     
     /* Layout */
@@ -170,7 +194,12 @@ main a {
     main h1, main h2 {
         text-shadow: #000 0.05em 0.05em 0.05em;
     }
+    #video iframe {
+        width: 560px;
+        height: 315px;
+    }
 }
+
 /* Tablet portrait */
 @media (min-width: 768px) {
     
@@ -262,4 +291,10 @@ main a {
         border-radius: 50%;
         margin-right: 50px;
     } 
+
+    /* Una página */
+    .Flex3 {
+        flex-direction: row;
+        align-items: center;
+    }
 }
